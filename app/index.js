@@ -1,11 +1,15 @@
 const express = require("express")
 const app = express()
-const port = 5000;
+
 
 app.get("/", (req, res)=>{
-    res.send("Hello ")
+    res.sendFile(__dirname + "/views/index.html")
 })
 
-app.listen(port, ()=>{
-    console.log(`app listing on ${port}`)
+app.get("/receive_product", (res, req)=>{
+    res.end(req.query.name, req.query.price)
+})
+
+app.listen(5000, ()=>{
+    console.log(`app listing on`)
 })
