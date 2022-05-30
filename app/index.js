@@ -1,6 +1,15 @@
-const express = require("express")
-const app = express()
+var express = require('express')
+var app = express()
+const bodyParser = require('body-parser')
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+    express: true
+}))
+
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/views')
+app.set('view engine', 'ejs')
 
 app.get("/", (req, res)=>{
     res.sendFile(__dirname + "/views/index.html")
