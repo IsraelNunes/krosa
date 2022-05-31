@@ -15,6 +15,10 @@ app.get("/", (req, res)=>{
     res.render("index")
 })
 
+app.get("/admin", (req, res)=>{
+    res.render("adicionarProduto")
+})
+
 app.post("/receive_product", (req, res)=>{
     console.log(req.body)
     res.send(JSON.stringify(req.body))
