@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
-    express: true
+    extented: true
 }))
 
 app.use(express.static(__dirname + '/public'));
@@ -12,11 +12,12 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.get("/", (req, res)=>{
-    res.render("adicionarProduto")
+    res.render("index")
 })
 
-app.get("/receive_product", (res, req)=>{
-    res.end(req.query.name, req.query.price)
+app.post("/receive_product", (req, res)=>{
+    console.log(req.body)
+    res.send(JSON.stringify(req.body))
 })
 
 app.listen(5000, ()=>{
