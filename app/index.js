@@ -10,18 +10,14 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
-A
+
 app.get("/", (req, res)=>{
-
     res.render("index")
-=======
-    res.render("index")
-
 })
 
 app.post("/receive_product", (req, res)=>{
     console.log(req.body)
-    res.send(JSON.stringify(req.body.name, req.body.price))
+    res.send(JSON.stringify(req.body))
 })
 
 app.listen(5000, ()=>{
