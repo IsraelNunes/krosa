@@ -1,15 +1,14 @@
 var express = require('express')
 var app = express()
 const bodyParser = require('body-parser')
-const { Router } = require('express')
+const router = express.Router()
 
+var product = {}
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extented: true
 }))
-
-const router = express.Router()
 
 router.get("/", (req, res)=>{
     res.render("index")
@@ -20,8 +19,15 @@ router.get("/admin", (req, res)=>{
 })
 
 router.post("/receive_product", (req, res)=>{
-    console.log(req.body)
+
     res.send(JSON.stringify(req.body))
+    console.log(product)
+})
+
+router.get("/receive_product", (req, res)=>{
+
+    req.send(JSON.stringify(req.body))
+    console.log(product)
 })
 
 router.get('/module', (req, res)=>{
