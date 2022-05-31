@@ -17,7 +17,7 @@ app.get("/", (req, res)=>{
 
 app.post("/receive_product", (req, res)=>{
     console.log(req.body)
-    res.send(JSON.stringify(req.body))
+    res.send(JSON.stringify(req.body.name, req.body.price))
 })
 
 app.listen(5000, ()=>{
