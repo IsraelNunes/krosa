@@ -10,9 +10,13 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
-
+A
 app.get("/", (req, res)=>{
+
     res.render("index")
+=======
+    res.render("index")
+
 })
 
 app.post("/receive_product", (req, res)=>{
