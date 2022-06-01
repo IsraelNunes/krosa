@@ -12,6 +12,6 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "nodemon -L app/index.js"
+    "start": "nodemon -L app/app.js"
   }
 }

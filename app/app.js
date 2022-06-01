@@ -1,6 +1,7 @@
 var express = require('express')
 var app = express()
 const bodyParser = require('body-parser')
+const productRoutes = require('./routes/productRoutes')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -11,14 +12,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
-app.get("/", (req, res)=>{
-    res.render("index")
-})
-
-app.post("/receive_product", (req, res)=>{
-    console.log(req.body)
-    res.send(JSON.stringify(req.body))
-})
+app.use(productRoutes)
 
 app.listen(5000, ()=>{
     console.log(`app listing on`)
