@@ -9,36 +9,28 @@
     </head>
 
     <body>
-        <!-- Header Start -->
-        <header>
-            <img src="img/logoKrosa.png" alt="Logo da loja Krosa">
-            <nav>
-                <a href="" class="exit">Sair</a>
-            </nav>
-        </header>
-        <!-- Header End -->
-
-        <!-- Main Start -->
-        <main>
-            <!-- Sidebar Start -->
-            <section>
+        <div id="container">
+            <!-- Main Start -->
+            <main>
+                <!-- Sidebar Start -->
                 <div id="sidebar">
-                    <h2>Administrador</h2>
+                    <img src="img/logoKrosa.png" alt="Logo da loja Krosa">
                     
+                    <h2>Administrador</h2>
+                        
                     <a href=""><ion-icon name="bar-chart-outline"></ion-icon>Estatisticas</a>
                     <a href=""><ion-icon name="cash-outline"></ion-icon>Vendas</a>
                     <a href=""><ion-icon name="pricetags-outline"></ion-icon>Produtos</a>
                     <a href=""><ion-icon name="people-outline"></ion-icon>Clientes</a>
                     <a href=""><ion-icon name="settings-outline"></ion-icon>Configurações</a> 
                 </div>
-            </section>
-        <!-- Sidebar End -->
+                <a href="" class="exit"><button>Sair</button></a>
+                <!-- Sidebar End -->
 
-        <!-- Form Start -->
-        <section>
+            <!-- Form Start -->
             <div id="form">
                 <h2>Adicionar produto</h2>
-
+        
                 <div class="nameAndDescription">
                     <h3>Nome e Descrição</h3>
 
@@ -46,10 +38,10 @@
                     <input class="name" type="text" name="name" id="name" placeholder="Ex: Camisa azul com mangas">
                 </div>
             </div>
-        </section>
-        <!-- Form End -->
-        </main>
-        <!-- Main End -->
+            <!-- Form End -->
+            </main>
+            <!-- Main End -->
+        </div>
 
         <!-- Script de Icons do ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
