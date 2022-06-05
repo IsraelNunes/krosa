@@ -12,7 +12,7 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
 
 app.get("/", (req, res)=>{
-    res.render("adicionarProduto")
+    res.render("addProduct")
 })
 
 app.get("/receive_product", (res, req)=>{
