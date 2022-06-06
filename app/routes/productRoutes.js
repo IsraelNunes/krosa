@@ -1,14 +1,9 @@
 var express = require('express')
-var app = express()
 const bodyParser = require('body-parser')
 const router = express.Router()
+const Product = require('../models/main')
 
-var product = {}
-
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-    extented: true
-}))
+let product = []
 
 router.get("/", (req, res)=>{
     res.render("index")
@@ -18,17 +13,12 @@ router.get("/admin", (req, res)=>{
     res.render("adicionarProduto")
 })
 
-router.post("/receive_product", (req, res)=>{
-
+router.post("/receive_product", async (req, res)=>{
+    await Product.create(req.body) 
+    console.log(product)
     res.send(JSON.stringify(req.body))
-    console.log(product)
 })
 
-router.get("/receive_product", (req, res)=>{
-
-    req.send(JSON.stringify(req.body))
-    console.log(product)
-})
 
 router.get('/module', (req, res)=>{
     console.log('GET request in places')
