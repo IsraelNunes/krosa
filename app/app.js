@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 const bodyParser = require('body-parser')
-const productRoutes = require('./routes/productRoutes')
+const productRoutes = require('./controllers/productRoutes')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
