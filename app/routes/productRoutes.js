@@ -15,7 +15,7 @@ router.get("/", (req, res)=>{
 })
 
 router.get("/admin", (req, res)=>{
-    res.render("adicionarProduto")
+    res.render("addProduct")
 })
 
 router.post("/receive_product", (req, res)=>{
