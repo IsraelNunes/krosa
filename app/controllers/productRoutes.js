@@ -9,9 +9,14 @@ router.get("/", (req, res)=>{
     res.render("index")
 })
 
-router.get("/admin", (req, res)=>{
-    res.render("addProduct")
+router.get("/admin/add", (req, res)=>{
+    res.render("addProduct", {title:"Adicionar produto", confirm: "Cadastrar produto", remove: false})
 })
+
+router.get("/admin/edit", (req, res)=>{
+    res.render("addProduct", {title:"Editar produto", confirm: "Confirmar alterações", remove: true})
+})
+
 
 router.post("/receive_product", async (req, res)=>{
     await Product.create(req.body) 

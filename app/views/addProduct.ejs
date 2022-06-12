@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastrar novos produtos | Krosa</title>
-        <link rel="stylesheet" href="css/style.css">
+        <title><%=title %> | Krosa</title>
+        <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body>
@@ -14,7 +14,7 @@
             <main>
                 <!-- Sidebar Start -->
                 <div id="sidebar">
-                    <img src="img/logoKrosa.png" alt="Logo da loja Krosa">
+                    <img src="../img/logoKrosa.png" alt="Logo da loja Krosa">
                     
                     <h2>Administrador</h2>
                         
@@ -29,7 +29,7 @@
 
                 <!-- Form Start -->
                 <form>
-                    <h2>Adicionar produto</h2>
+                    <h2><%=title %></h2>
             
                     <!-- Name and description Start -->
                     <fieldset class="nameAndDescription">
@@ -37,7 +37,7 @@
 
                         <div class="name">
                             <label for="name">Nome</label> <br>
-                            <input type="text" name="name" id="name" placeholder="Ex: Camisa azul com mangas">
+                            <input type="text" name="name" id="name" placeholder="Ex: Camisa azul com mangas" value="<%=title %>">
                         </div>
 
                         <div class="description">
@@ -54,21 +54,21 @@
                         <div id="photo">
                             <div>
                                 <div class="photoContainer">
-                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                    <img src="../img/camera.png" alt="Selecione uma imagem">
                                 </div>
                             </div>
                             <input type="file" id="images" name="images" accept="image/*">
         
                             <div>
                                 <div class="photoContainer">
-                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                    <img src="../img/camera.png" alt="Selecione uma imagem">
                                 </div>
                             </div>
                             <input type="file" id="images" name="images" accept="image/*">
         
                             <div>
                                 <div class="photoContainer">
-                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                    <img src="../img/camera.png" alt="Selecione uma imagem">
                                 </div>
                             </div>
                             <input type="file" id="images" name="images" accept="image/*">
@@ -144,7 +144,10 @@
                     </fieldset>
                     <!-- Inventory End -->
 
-                    <button id="register" type="button">Cadastrar produto</button>
+                    <button class="register" type="button"><%=confirm %></button>
+                    <%if(remove == true) { %>
+                        <button class="register" type="button">Remover produto</button>
+                    <% } %> 
                 </form>
                 <!-- Form End -->
             </main>

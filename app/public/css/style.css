@@ -269,7 +269,7 @@ input[type='file'] {
 
 /* ***** Inventory End ***** */
 
-#register {
+.register {
     font-size: 20px;
     padding: 10px 35px;
     margin: 20px 0 40px 30vw;
@@ -279,7 +279,7 @@ input[type='file'] {
     color: #fff;
 }
 
-#register:hover {
+.register:hover {
     background: #926AA5;
 }
 
