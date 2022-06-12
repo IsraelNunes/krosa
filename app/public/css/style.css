@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    width: 100vw;
+}
+/* ***** Main Start ***** */
+
+/* ***** Sidebar Start ***** */
+
+#sidebar {
+    position: fixed;
+    width: 15vw;
+    height: 100vh;
+    border-right: 1px solid #B5B3B3;
+}
+
+#sidebar h2 {
+    padding-left: 2vw;
+    color: #B5B3B3;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#sidebar a {
+    color: #5C5C5C;
+    display: block;
+    width: 15vw;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 2vw;
+    box-sizing: border-box;
+}
+
+#sidebar a:hover {
+    color: #fff;
+    background: #D88CCA;
+}
+
+#sidebar ion-icon {
+    padding-right: 10px;
+}
+
+#sidebar img {
+    margin: 0;
+    width: 125px;
+    height: 125px;
+    margin-left: 4vw;
+}
+
+#setting {
+    display: flex;
+    align-self: flex-end;
+}
+
+.exit button {
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    margin-top: 3vh;
+    margin-right: 2vw;
+    background: #D88CCA;
+    border-radius: 5px;
+    float: right;
+}
+
+.exit button:hover {
+    background: #926AA5;
+}
+
+.exit a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ***** SideBar End ***** */
+
+/* ***** Form Start  ***** */
+
+form {
+    padding-top: 10vh;
+    padding-left: 17.5vw;
+}
+
+form h2 {
+    padding-bottom: 15px;
+    font-size: 2em;
+    font-weight: 400;
+    color: #926AA5;
+}
+
+form label {
+    font-size: 20px;
+    color: #5C5C5C;
+}
+
+/* ***** Form End  ***** */
+
+/* ***** Name and Description Start  ***** */
+
+fieldset {
+    width: 76vw;
+    border-radius: 10px;
+    padding: 1.2em;
+    border: none;
+    border: 1px solid #5C5C5C;
+    margin-bottom: 2vh;
+}
+
+fieldset h3 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #926AA5;
+    padding-bottom: 10px;
+}
+
+input::placeholder {
+    color: #BBBBBB;
+}
+
+.name input {
+    width: 73vw;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 1em;
+    padding-left: 0.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 1.5vh;
+    border: none;
+    border: 1px solid #5C5C5C;
+    cursor: pointer;
+}
+
+.description textarea {
+    margin-bottom: 15px;
+    margin-top: 0.5vh;
+    width: 73.7vw;
+    height: 15vh;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ***** Name and Description Start  ***** */
+
+/* ***** Photos Start  ***** */
+
+#photo {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.photoContainer {
+    border: 1px dotted #5C5C5C;
+    border-radius: 10px;
+    width: 20vw;
+    height: 30vh;
+    margin: 5px 15px 15px 15px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.photoContainer:hover {
+    background: #926AA5;
+}   
+
+.photoContainer img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 12vh;
+    width: 35px;
+    height: 40px;
+}
+/* ***** Photos End  ***** */
+
+/* ***** Price End  ***** */
+
+#price {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+#price input{
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #5C5C5C;
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 20vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+#price input:placeholder-shown {
+    font-size: 15px;
+}
+
+/* ***** Price End  ***** */
+
+/* ***** Weight and dimension Start  ***** */
+
+#weightStyle {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #5C5C5C;
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 30vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+#dimensionContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+    align-items: center;
+}
+
+#dimensionContainer input {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #5C5C5C;
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 15vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+#dimensionContainer ion-icon {
+    font-size: 30px;
+    padding-left: 0.5vw;
+    padding-top: 15px;
+}
+
+/* ***** Weight and dimension End  ***** */
+
+/* ***** Inventory Start ***** */
+
+#inventory {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+#inventory input {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #5C5C5C;
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 20vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+/* ***** Inventory End ***** */
+
+#register {
+    font-size: 20px;
+    padding: 10px 35px;
+    margin: 20px 0 40px 30vw;
+    border-radius: 10px;
+    border: none;
+    background: #D88CCA;
+    color: #fff;
+}
+
+#register:hover {
+    background: #926AA5;
+}
+
+/* ***** Main End ***** */

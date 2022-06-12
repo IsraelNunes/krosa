@@ -22,23 +22,131 @@
                     <a href=""><ion-icon name="cash-outline"></ion-icon>Vendas</a>
                     <a href=""><ion-icon name="pricetags-outline"></ion-icon>Produtos</a>
                     <a href=""><ion-icon name="people-outline"></ion-icon>Clientes</a>
-                    <a href=""><ion-icon name="settings-outline"></ion-icon>Configurações</a> 
+                    <a href="" id="setting"><ion-icon name="settings-outline"></ion-icon>Configurações</a> 
                 </div>
-                <a href="" class="exit"><button>Sair</button></a>
+                <a href="" class="exit"><button type="button">Sair</button></a>
                 <!-- Sidebar End -->
 
-            <!-- Form Start -->
-            <div id="form">
-                <h2>Adicionar produto</h2>
-        
-                <div class="nameAndDescription">
-                    <h3>Nome e Descrição</h3>
+                <!-- Form Start -->
+                <form>
+                    <h2>Adicionar produto</h2>
+            
+                    <!-- Name and description Start -->
+                    <fieldset class="nameAndDescription">
+                        <h3>Nome e Descrição</h3>
 
-                    <label for="name">Nome</label> <br>
-                    <input class="name" type="text" name="name" id="name" placeholder="Ex: Camisa azul com mangas">
-                </div>
-            </div>
-            <!-- Form End -->
+                        <div class="name">
+                            <label for="name">Nome</label> <br>
+                            <input type="text" name="name" id="name" placeholder="Ex: Camisa azul com mangas">
+                        </div>
+
+                        <div class="description">
+                            <label for="description">Descrição</label> <br>
+                            <textarea name="description" id="description"></textarea>
+                        </div>
+                    </fieldset>
+                    <!-- Name and description End -->
+
+                    <!-- Photos Start -->
+                    <fieldset>
+                        <h3>Fotos</h3>
+
+                        <div id="photo">
+                            <div>
+                                <div class="photoContainer">
+                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                </div>
+                            </div>
+                            <input type="file" id="images" name="images" accept="image/*">
+        
+                            <div>
+                                <div class="photoContainer">
+                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                </div>
+                            </div>
+                            <input type="file" id="images" name="images" accept="image/*">
+        
+                            <div>
+                                <div class="photoContainer">
+                                    <img src="img/camera.png" alt="Selecione uma imagem">
+                                </div>
+                            </div>
+                            <input type="file" id="images" name="images" accept="image/*">
+                        </div>
+                    </fieldset>
+                    <!-- Photos End -->
+
+                    <!-- Price Start-->
+                    <fieldset>
+                        <h3>Preço</h3>
+
+                        <div id="price">
+                            <div>
+                                <label for="realPrice">Preço original</label> <br>
+                                <input type="number" name="realPrice" id="realPrice" placeholder="R$ 0,00">
+                            </div>
+
+                            <div>
+                                <label for="realPrice">Preço promoção</label> <br>
+                                <input type="number" name="realPrice" id="realPrice" placeholder="R$ 0,00">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- Price End-->
+
+                    <!-- Weight and dimension Start -->
+                    <fieldset>
+                        <h3>Peso e dimensões</h3>
+
+                        <div>
+                            <label for="weight">Peso</label> <br>
+                            <input type="number" id="weightStyle" name="weight" id="weight" placeholder="0,0000 Kg">
+                        </div>
+
+                        <div id="dimensionContainer">
+                            <div>
+                                <label for="length">Comprimento</label> <br>
+                                <input type="number" name="length" id="length" placeholder="0,00 Cm">
+                            </div>
+    
+                            <ion-icon name="close-outline"></ion-icon>
+
+                            <div>
+                                <label for="width">Largura</label> <br>
+                                <input type="number" name="width" id="width" placeholder="0,00 Cm">
+                            </div>
+    
+                            <ion-icon name="close-outline"></ion-icon>
+
+                            <div>
+                                <label for="height">Altura</label> <br>
+                                <input type="number" name="height" id="height" placeholder="0,00 Cm">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- Weight and dimension End -->
+
+                    <!-- Inventory Start -->
+                    <fieldset>
+                        <h3>Estoque</h3>
+
+                        <div id="inventory">
+                            <div>
+                                <label for="quantity">Quantidade</label> <br>
+                                <input type="number" name="quantity" id="quantity" placeholder="Ex: 5">
+                            </div>
+    
+                            <div>
+                                <label for="id">IDs</label> <br>
+                                <input type="number" name="id" id="id">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- Inventory End -->
+
+                    <button id="register" type="button">Cadastrar produto</button>
+                </form>
+                <!-- Form End -->
             </main>
             <!-- Main End -->
         </div>
