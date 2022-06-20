@@ -44,6 +44,17 @@
                             <label for="description">Descrição</label> <br>
                             <textarea name="description" id="description"></textarea>
                         </div>
+
+                        <div class="tags">
+                            <label for="tags">Tags</label> <br>
+                            <select name="tags" id="tags">
+                                <option value="">Camisa</option>
+                                <option value="">Calças</option>
+                                <option value="">Jaqueta</option>
+                                <option value="">Saia</option>
+                                <option value="">Vestido</option>
+                            </select>
+                        </div>
                     </fieldset>
                     <!-- Name and description End -->
 
@@ -144,9 +155,9 @@
                     </fieldset>
                     <!-- Inventory End -->
 
-                    <button class="register" type="button"><%=confirm %></button>
+                    <button class="confirm" id="register" type="button"><%=confirm %></button>
                     <%if(remove == true) { %>
-                        <button class="register" type="button">Remover produto</button>
+                        <button class="confirm" id="remove" type="button">Remover produto</button>
                     <% } %> 
                 </form>
                 <!-- Form End -->
