@@ -1,0 +1,59 @@
+/* ***** addProduct button Start ***** */
+
+.add button {
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    margin-top: 3vh;
+    margin-right: 2vw;
+    background: #D88CCA;
+    border-radius: 5px;
+    float: right;
+}
+
+.add button:hover {
+    background: #926AA5;
+}
+
+.add a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* ***** addProduct button End ***** */
+
+/* **** Search and filter Start **** */
+
+.searchProduct {
+    width: 75vw;
+    height: 40px;
+}
+
+.searchProduct input {
+    width: 71vw;
+    height: 40px;
+    float: left;
+    font-family: 'Arial';
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+    padding-left: 0.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 1.5vh;
+    border: none;
+    border: 1px solid #5C5C5C;
+    cursor: pointer;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: #926AA5;
+    padding: 5px 10px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 0.5vh;
+    margin-bottom: 1.5vh;
+    cursor: pointer;
+}
+
+/* **** Search and filter End **** */

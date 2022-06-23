@@ -17,6 +17,9 @@ router.get("/admin/edit", (req, res)=>{
     res.render("addProduct", {title:"Editar produto", confirm: "Confirmar alterações", remove: true})
 })
 
+router.get("/admin/list", (req, res)=>{
+    res.render("listProduct")
+})
 
 router.post("/receive_product", async (req, res)=>{
     await Product.create(req.body) 
