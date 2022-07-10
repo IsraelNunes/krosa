@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de produtos | Krosa</title>
+        <link rel="stylesheet" href="../css/common_style.css">
+        <link rel="stylesheet" href="../css/list_admin_style.css">
+        <link rel="stylesheet" href="../css/sidebarAdminStyle.css">
+    </head>
+    
+    <body>
+        <!-- Container Start -->
+        <div id="container">
+            <!-- Main Start -->
+            <main>
+                <!-- Sidebar Start -->
+                <div id="sidebar">
+                    <img src="../img/logoKrosa.png" alt="Logo da loja Krosa">
+                    
+                    <h2>Administrador</h2>
+                        
+                    <a href=""><ion-icon name="bar-chart-outline"></ion-icon>Estatisticas</a>
+                    <a href=""><ion-icon name="cash-outline"></ion-icon>Vendas</a>
+                    <a href=""><ion-icon name="pricetags-outline"></ion-icon>Produtos</a>
+                    <a href=""><ion-icon name="people-outline"></ion-icon>Clientes</a>
+                    <a href="" id="setting"><ion-icon name="settings-outline"></ion-icon>Configurações</a> 
+                </div>
+                <a href="" class="add"><button type="button">Adicionar produtos</button></a>
+                <!-- Sidebar End -->
+
+                <!-- Form Start -->
+                <form class="position_elements">
+                    <h2>Lista de produtos</h2>
+                    <!-- Search and filter Start -->
+                    <fieldset>
+                        <h3>Filtros</h3>
+
+                        <div class="searchProduct">
+                            <label for="productFind">Pesquisa</label> <br>
+                            <input type="search" name="productFind" id="productFind" placeholder="Pesquisa" list="history">
+                            <img src="../img/lupa.png" class="btn" alt="">
+                            <datalist id="history">
+                                <option value="Camisa"></option>
+                                <option value="Vestido"></option>
+                                <option value="Saia"></option>
+                                <option value="Short"></option>
+                                <option value="Jaqueta"></option>
+                            </datalist>
+                        </div>
+
+                        <div id="action_and_ordenation">
+                            <div>
+                                <label for="all_action">Todas as ações</label> <br>
+                                <select name="all_action" id="all_action">
+                                    <option value="">Apagar</option>
+                                    <option value="">Insterir na loja</option>
+                                    <option value="">Tornar produto nao visivel</option>
+                                </select>
+                            </div>
+
+                            <div class="">
+                                <label for="ordenation_product">Ordenar</label> <br>
+                                <select name="ordenation_product" id="ordenation_product">
+                                    <option value="">A - Z</option>
+                                    <option value="">Z - A</option>
+                                    <option value="">Menor valor</option>
+                                    <option value="">Maior Valor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- Search and filter End -->
+                </form>
+                <!-- Form End -->
+                
+                <!-- List product Start -->
+                <div class="position_elements" id="list_product">
+                    <ul>
+                        <% for (var i = 0; i < infoProduct.length;  i++) { %>
+                            <br/> <li><%= infoProduct[i].dataValues.name %></li> 
+                        <% } %>
+                    </ul>
+                </div>
+               <!-- List product End -->
+            </main>
+            <!-- Main End -->
+        </div>
+        <!-- Container End -->
+
+        <!-- Script de Icons do ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
