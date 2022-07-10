@@ -10,12 +10,12 @@
     width: 100vw;
 }
 
-/* ***** Form Start  ***** */
-
-form {
+.position_elements {
     padding-top: 10vh;
     padding-left: 17.5vw;
 }
+
+/* ***** Form Start  ***** */
 
 form h2 {
     padding-bottom: 15px;

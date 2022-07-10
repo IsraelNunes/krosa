@@ -2,6 +2,7 @@ var express = require('express')
 const bodyParser = require('body-parser')
 const router = express.Router()
 const Product = require('../models/main')
+const { ftruncateSync } = require('fs')
 
 let product = []
 
@@ -17,8 +18,11 @@ router.get("/admin/edit", (req, res)=>{
     res.render("addProduct", {title:"Editar produto", confirm: "Confirmar alterações", remove: true})
 })
 
-router.get("/admin/list", (req, res)=>{
-    res.render("listProduct")
+router.get("/admin/list", async (req, res)=>{
+    const infoProduct = await Product.findAll();
+    console.log(infoProduct[0].dataValues.name)
+    
+    res.render("listProduct", {infoProduct})
 })
 
 router.post("/receive_product", async (req, res)=>{

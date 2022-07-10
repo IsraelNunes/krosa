@@ -10,7 +10,7 @@ const { Sequelize } = require('sequelize');
           primaryKey: true
       },
       name: Sequelize.STRING,
-      desc: Sequelize.STRING
+      description: Sequelize.STRING
   }, {freezeTableName: true, timestamps: false});
   
 module.exports = Product;

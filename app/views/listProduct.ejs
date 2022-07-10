@@ -31,7 +31,7 @@
                 <!-- Sidebar End -->
 
                 <!-- Form Start -->
-                <form>
+                <form class="position_elements">
                     <h2>Lista de produtos</h2>
                     <!-- Search and filter Start -->
                     <fieldset>
@@ -74,6 +74,16 @@
                     <!-- Search and filter End -->
                 </form>
                 <!-- Form End -->
+                
+                <!-- List product Start -->
+                <div class="position_elements" id="list_product">
+                    <ul>
+                        <% for (var i = 0; i < infoProduct.length;  i++) { %>
+                            <br/> <li><%= infoProduct[i].dataValues.name %></li> 
+                        <% } %>
+                    </ul>
+                </div>
+               <!-- List product End -->
             </main>
             <!-- Main End -->
         </div>
